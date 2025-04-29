@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+sudo dnf makecache
+sudo dnf install gtk4-devel libadwaita-devel blueprint-compiler gettext
+
+wget https://ziglang.org/download/0.14.0/zig-linux-x86_64-0.14.0.tar.xz -O /tmp/zig.tar.xz
+tar -xvf /tmp/zig.tar.xz -C $HOME/.local
+export PATH="$HOME/.local/zig-linux-x86_64-0.14.0:$PATH"
+
+git clone git@github.com:ghostty-org/ghostty.git $HOME/personal/ghostty
+
+(
+cd $HOME/personal/ghostty
+zig build -p $HOME/.local -Doptimize=ReleaseFast
+)
