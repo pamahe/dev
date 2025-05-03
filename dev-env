@@ -57,7 +57,7 @@ CONFIG_HOME=${XDG_CONFIG_HOME:-"$HOME/.config"}
 copy_dir env/.config $CONFIG_HOME
 copy_dir .local $HOME/.local
 
-
 copy_file env/.bashrc $HOME/
 copy_file env/.bash_aliases $HOME/
 copy_file env/.inputrc $HOME/
+copy_file env/.ssh/config $HOME/.ssh/
