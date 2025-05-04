@@ -4,8 +4,7 @@
     "spacing": 5,
     "modules-left": [
 	    "hyprland/workspaces",
-	    "hyprland/submap",
-	    "custom/git_branch"
+	    "hyprland/submap"
     ],
     "modules-center": [
 	    "hyprland/window"
@@ -20,11 +19,9 @@
     "hyprland/window": {
         "max-length": 50
     },
-    "custom/git_branch": {
-	"exec": "$HOME/.config/waybar/custom_modules/git_branch.sh",
-        "interval": 5,
-        "format": "{}",
-        "return-type": "text"
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
     },
     "clock": {
         "format": "{:%a %y-%m-%d  %H:%M:%S}",
@@ -50,8 +47,7 @@
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""],
-	"interval": 3
+        "format-icons": ["", "", "", "", ""]
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
