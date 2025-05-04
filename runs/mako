@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Notification daemon
+sudo dnf install mako
