@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
 
-sudo dnf install hyprland swaybg swaylock
+sudo dnf install hyprland swaybg swaylock wl-clipboard
+
+# Create folder for screenshots
+if [ ! -d /$HOME/Pictures/screenshots ]; then
+	mkdir ~/Pictures/screenshots
+fi
